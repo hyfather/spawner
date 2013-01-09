@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  url: MyString
+  version: MyString
+  posted_to_heroku: false
+  cloned_from_github: false
+  pushed_to_heroku: false
+
+two:
+  name: MyString
+  url: MyString
+  version: MyString
+  posted_to_heroku: false
+  cloned_from_github: false
+  pushed_to_heroku: false
