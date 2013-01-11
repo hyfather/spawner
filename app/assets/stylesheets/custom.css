@@ -62,7 +62,7 @@ a {
 
 
 /* Base Color: #97CB43 */
-.btn-custom {
+.btn-custom-success {
    background-color: hsl(84, 56%, 46%) !important;
    background-repeat: repeat-x;
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9fcf57", endColorstr="#82b633");
@@ -79,6 +79,35 @@ a {
    -webkit-font-smoothing: antialiased;
 }
 
-h3.logo {
+/* Base Color: #DCD31A */
+.btn-custom-info {
+  background-color: hsl(57, 79%, 46%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6dd2d", endColorstr="#d1c818");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e6dd2d), to(#d1c818));
+  background-image: -moz-linear-gradient(top, #e6dd2d, #d1c818);
+  background-image: -ms-linear-gradient(top, #e6dd2d, #d1c818);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e6dd2d), color-stop(100%, #d1c818));
+  background-image: -webkit-linear-gradient(top, #e6dd2d, #d1c818);
+  background-image: -o-linear-gradient(top, #e6dd2d, #d1c818);
+  background-image: linear-gradient(#e6dd2d, #d1c818);
+  border-color: #d1c818 #d1c818 hsl(57, 79%, 44%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.13);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+h2.logo {
    color: #13B4A3;
+}
+
+div.details{
+   display: none;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+div.center-insides {
+   text-align: center;
 }
