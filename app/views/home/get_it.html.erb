@@ -3,6 +3,7 @@
     <li><a href="/">Home</a></li>
     <li class="active"><a href="/get_it">Get Reconcile App</a></li>
     <li><a href="#">Login</a></li>
+    <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
     <li><a href="#">About</a></li>
   </ul>
   <h2 class="logo" >Reconcile App</h2>
@@ -15,7 +16,7 @@
 
 <div class="row-fluid">
   <div class="span4 offset4 center-insides">
-    <a class="btn btn-large btn-custom-success" href="#">
+    <a class="btn btn-large btn-custom-success" href="<%=new_user_registration_path%>">
       Deploy Automatically
     </a>
   </div>
@@ -67,8 +68,6 @@
   <div class="span8 offset2 center-insides">
     <a class="btn btn-large btn-custom-info" href="#">Do it
     Yourself</a>
-
-
   </div>
   <hr>
 </div>
