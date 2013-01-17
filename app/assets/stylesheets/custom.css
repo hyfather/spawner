@@ -97,6 +97,9 @@ a {
   -webkit-font-smoothing: antialiased;
 }
 
+div#error_explanation{
+   color: #FF0000;
+}
 
 h2.logo {
    color: #13B4A3;

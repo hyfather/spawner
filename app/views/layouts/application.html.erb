@@ -21,6 +21,35 @@
 
   <body>
     <div class="container-narrow">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/get_it">Get Reconcile App</a></li>
+
+          <% if current_user %>
+          <li><%= link_to "Account", "#", :method => :delete %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <% end %>
+
+          <li><a href="#">About</a></li>
+        </ul>
+        <h2 class="logo" >Reconcile App</h2>
+      </div>
+
+      <hr>
+
+      <% p flash %>
+
+      <% if flash[:alert] -%>
+      <p class='alert'><%=h flash[:alert] %></p> <hr>
+      <% end -%>
+      <% if flash[:notice] -%>
+      <p class='notice'><%=h flash[:notice] %></p> <hr>
+      <% end -%>
+
+
       <%= yield %>
     </div> <!-- /container -->
   </body>
