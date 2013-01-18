@@ -1,6 +1,7 @@
 class ReconcileApp < ActiveRecord::Base
   attr_accessible :cloned_from_github, :name, :posted_to_heroku, :pushed_to_heroku, :url, :version
-
+  belongs_to :user
+  
   def install
     post_to_heroku
     clone_from_github

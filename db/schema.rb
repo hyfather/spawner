@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130110044119) do
+ActiveRecord::Schema.define(:version => 20130118072316) do
 
   create_table "reconcile_apps", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130110044119) do
     t.boolean  "pushed_to_heroku"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

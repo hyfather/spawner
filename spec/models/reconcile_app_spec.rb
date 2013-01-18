@@ -1,6 +1,16 @@
 require 'spec_helper'
 
 describe ReconcileApp do
+
+  it "should belong to a user" do
+    user = User.create!(:email => "user@email.com", :password => "password")
+    user.skip_confirmation!
+    app = ReconcileApp.create!
+    app.user = user; app.save!
+
+    app.user.id.should == user.id
+    user.reconcile_app.id.should == app.id
+  end
   
   it "should post an app to heroku if it hasn't been posted" do
     app = ReconcileApp.create!
