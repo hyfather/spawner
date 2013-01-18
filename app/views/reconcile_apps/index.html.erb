@@ -1,0 +1,7 @@
+<% if @reconcile_app.blank? %>
+<h3>On your mark...</h3>
+<hr>
+
+<% else %>
+<%= current_user.reconcile_app.inspect %>
+<% end %>
