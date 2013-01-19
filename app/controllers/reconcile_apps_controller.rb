@@ -13,6 +13,7 @@ class ReconcileAppsController < ApplicationController
       head :forbidden
     else
       @reconcile_app = current_user.create_reconcile_app
+      Resque.enqueue(Deployment, @reconcile_app.id)
       redirect_to reconcile_apps_path
     end
   end
