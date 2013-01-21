@@ -21,3 +21,5 @@ test:
 production:
   adapter: postgresql
   database: spawnerproduction
+  host: localhost
+  pool: 5
