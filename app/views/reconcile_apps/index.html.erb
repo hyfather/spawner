@@ -1,2 +1,22 @@
-<%= current_user.reconcile_app.inspect %>
+<% if current_user.reconcile_app.deployment_complete? %>
+<h3> Your ReconcileApp deployment is complete! </h3>
+<hr>
 
+
+<a href="http://<%= current_user.reconcile_app.name %>.herokuapp.com">
+<i class="icon-ok"></i>
+  <%= current_user.reconcile_app.name %>.herokuapp.com
+</a>
+<hr>
+Bear in mind that all your expenses will be tracked on the above
+applicaiton, not here. You probably won't even need to visit
+www.reconcileapp.com again! Farewell.
+<% else %>
+<h3> Your ReconcileApp deployment is in progress... </h3>
+<hr>
+<div class="progress progress-success progress-striped active">
+  <div class="bar" style="width: 50%;"></div>
+</div>
+<hr>
+This usually takes a few minutes. Feel free to refresh or come back later!
+<% end %>

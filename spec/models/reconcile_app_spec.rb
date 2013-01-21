@@ -76,4 +76,14 @@ describe ReconcileApp do
 
     app.should be_pushed_to_heroku
   end
+
+  it "should let us know whether the deployment is complete" do
+    app = ReconcileApp.create!(:posted_to_heroku => true, :cloned_from_github => true, :pushed_to_heroku => true)
+    app.deployment_complete?.should be_true
+  end
+
+  it "should let us know whether the deployment is NOT complete" do
+    app = ReconcileApp.create!(:posted_to_heroku => true, :cloned_from_github => true, :pushed_to_heroku => false)
+    app.deployment_complete?.should be_false
+  end
 end

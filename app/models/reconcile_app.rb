@@ -56,4 +56,8 @@ class ReconcileApp < ActiveRecord::Base
   def heroku=(hk)
     @heroku = hk
   end
+
+  def deployment_complete?
+    pushed_to_heroku and cloned_from_github and pushed_to_heroku
+  end
 end
