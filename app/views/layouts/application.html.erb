@@ -17,6 +17,9 @@
           rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Arimo"
           rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Trocchi"
+          rel="stylesheet" type="text/css">
+
   </head>
 
   <body>
@@ -27,13 +30,13 @@
           <li><a href="/get_it">Get Reconcile App</a></li>
 
           <% if current_user %>
-          <li><%= link_to "Account", "#", :method => :delete %></li>
+          <li><%= link_to "Account", reconcile_apps_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
           <% else %>
           <li><%= link_to "Login", new_user_session_path %></li>
           <% end %>
 
-          <li><a href="#">About</a></li>
+          <li><a href="<%= about_path %>">About</a></li>
         </ul>
         <h2 class="logo" >Reconcile App</h2>
       </div>

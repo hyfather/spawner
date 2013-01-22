@@ -12,6 +12,18 @@ Bear in mind that all your expenses will be tracked on the above
 applicaiton, not here. You probably won't even need to visit
 www.reconcileapp.com again! Farewell.
 <% else %>
+
+<script type="text/javascript">
+    window.onload = setupRefresh;
+
+    function setupRefresh() {
+      setTimeout("refreshPage();", 10000); // milliseconds
+    }
+    function refreshPage() {
+       window.location = location.href;
+    }
+</script>
+
 <h3> Your ReconcileApp deployment is in progress... </h3>
 <hr>
 <div class="progress progress-success progress-striped active">
@@ -19,4 +31,5 @@ www.reconcileapp.com again! Farewell.
 </div>
 <hr>
 This usually takes a few minutes. Feel free to refresh or come back later!
+
 <% end %>

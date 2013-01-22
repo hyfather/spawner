@@ -43,8 +43,12 @@ body {
    margin-top: 28px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2{
    font-family: 'Pacifico', Georgia, serif;
+}
+
+h3, h4, h5, h6 {
+   font-family: 'Trocchi', Georgia, serif;
 }
 
 p, div {
@@ -113,4 +117,9 @@ div.details{
 
 div.center-insides {
    text-align: center;
+}
+
+img.catphoto {
+   max-width: 300px;
+   max-height: 300px;
 }

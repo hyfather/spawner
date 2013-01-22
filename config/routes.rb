@@ -4,12 +4,10 @@ Spawner::Application.routes.draw do
   root :to => 'home#index'
 
   match 'get_it' => 'home#get_it'
+  match 'about' => 'home#about'
 
 
   resources :reconcile_apps, :only => [:index, :new, :create]
-
-
-  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

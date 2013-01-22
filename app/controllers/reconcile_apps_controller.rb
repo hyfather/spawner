@@ -1,4 +1,6 @@
 class ReconcileAppsController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
     @reconcile_app = current_user.reconcile_app
     redirect_to new_reconcile_app_path unless @reconcile_app
