@@ -14,3 +14,7 @@
 /log/*.log
 /tmp
 config/vars.sh
+
+config/database.yml
+.ssh
+public/assets/
