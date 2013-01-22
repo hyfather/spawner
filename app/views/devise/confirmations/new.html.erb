@@ -1,7 +1,12 @@
-<h2>Resend confirmation instructions</h2>
+<h3>Resend confirmation instructions</h3>
+
+<h4>Have you checked your spam?</h4>
+<p>Our confirmations emails are sometimes marked by gmail as spam, so
+  please check in your spam folder first!</p>
 
 <%= form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
+<hr/>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>

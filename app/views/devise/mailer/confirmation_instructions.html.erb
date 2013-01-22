@@ -1,5 +1,13 @@
-<p>Welcome <%= @email %>!</p>
+<p>Hi <%= @email %>!<br/>
+You just signed up for ReconcileApp.com.</p>
+<p>You can confirm your account email through the link below:<br>
+<%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Have a great day ahead!<br>
+- ReconcileApp
+</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p>
+P.S. Don't reply to this email since the address isn't
+monitored. Contact us from www.reconcileapp.com instead.
+</p>

@@ -1,16 +1,22 @@
-<% if current_user.reconcile_app.deployment_complete? %>
+<% if true or current_user.reconcile_app.deployment_complete? %>
 <h3> Your ReconcileApp deployment is complete! </h3>
 <hr>
-
 
 <a href="http://<%= current_user.reconcile_app.name %>.herokuapp.com">
 <i class="icon-ok"></i>
   <%= current_user.reconcile_app.name %>.herokuapp.com
-</a>
+</a> was installed on heroku
+<%= distance_of_time_in_words(current_user.reconcile_app.created_at,
+    Time.now)%> ago.
 <hr>
+<span class="label label-warning">Hang on!</span>
 Bear in mind that all your expenses will be tracked on the above
 applicaiton, not here. You probably won't even need to visit
-www.reconcileapp.com again! Farewell.
+www.reconcileapp.com again, so we recommend that you <u>bookmark</u> the
+above link.<br>
+If you'd like to take ownership of the app hosted on heroku at some
+point in the future, let us know and we'll gladly transfer the
+ownership to you! Farewell.
 <% else %>
 
 <script type="text/javascript">
